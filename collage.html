@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML and CSS Collage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="nyc"><p id="text-nyc">NYC</p></div>
+        <p id="counter">00:00:00</p>
+        <!-- video needs to be muted to autoplay -->
+        <video src="media/grain.mp4" type="video/mp4" id="overlay" width="800" height="450" autoplay muted loop>
+        </video>
+        <video src="media/nyc.mp4" type="video/mp4" id="footage" width="800" height="450" autoplay muted loop>
+        </video>
+
+        <audio autoplay controls>
+            <!-- by default, most browsers do not allow audio to autoplay -->
+            <source src="media/music.mp3" type="audio/mpeg">
+        </audio>
+        <div id="pop-up">
+            <p>Created for Drawing on the Web, Spring 2020 by Claire Wang.</p>
+            <p>Background video credit: <a href="https://www.youtube.com/channel/UCIvTu9cuf-NZFzHPJZPH23Q" target="_blank">Willem Verbeeck</a></p>
+            <p>Music: What A Wonderful Thing To Do – <a href="https://www.youtube.com/channel/UCIvTu9cuf-NZFzHPJZPH23Q" target="_blank">Joey Pecoraro</a></p>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            setInterval(count, 1);
+        };
+
+        let counter = 0;
+        let ms = 0;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        function count() {
+            ms++;
+            time = "";
+            if (ms >= 250) {
+                seconds++;
+                ms = 0;
+            }
+            if (seconds >= 60) {
+                minutes++;
+                seconds = 0;
+            }
+            if (minutes >= 60) {
+                hours++;
+                minutes = 0;
+            }
+            if (hours < 1) {
+                time += "00";
+            } else if (hours < 10 && hours >= 1) {
+                time += "0" + hours;
+            } else {
+                time += hours;
+            }
+            time += ":";
+            if (minutes < 1) {
+                time += "00";
+            } else if (minutes < 10 && minutes >= 1) {
+                time += "0" + minutes;
+            } else {
+                time += minutes;
+            }
+            time += ":";
+            if (seconds < 1) {
+                time += "00";
+            } else if (seconds < 10 && seconds >= 1) {
+                time += "0" + seconds;
+            } else {
+                time += seconds;
+            }
+            //                time += "." + ms;
+            document.getElementById('counter').innerHTML = time;
+            //do stuff
+        }
+        
+        document.getElementById('text-nyc').onclick = function() {
+            let d = document.getElementById('pop-up').style.display;
+            if(d == 'block') {
+                document.getElementById('pop-up').style.display = 'none';
+            } else {
+                document.getElementById('pop-up').style.display = 'block';
+            }
+        };
+    </script>
+</body>
+
+</html>
