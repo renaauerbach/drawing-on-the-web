@@ -10,43 +10,38 @@
     <body>
         <div id="container">
             <div id="nyc">
-                <p id="text-nyc">The Lion King taks NYC</p>
+                <p id="text-nyc">The Lion King takes NYC</p>
             </div>
             <!-- video needs to be muted to autoplay -->
-            <video
-                src="media/grain.mp4"
-                type="video/mp4"
-                id="overlay"
-                width="800"
-                height="450"
-                autoplay
-                muted
-                loop
-            ></video>
-            <video
-                src="media/nyc.mp4"
-                type="video/mp4"
-                id="footage"
-                width="800"
-                height="450"
-                autoplay
-                muted
-                loop
-            ></video>
-
+            <div class="pictures">
+                <img class="single" src="media/mufasa.png" />
+                <img class="trio" src="media/hakuna_matata.png" />
+            </div>
+            <div class="videos">
+                <video
+                    src="media/grain.mp4"
+                    type="video/mp4"
+                    id="overlay"
+                    width="800"
+                    height="450"
+                    autoplay
+                    muted
+                    loop
+                ></video>
+                <video
+                    src="media/nyc.mp4"
+                    type="video/mp4"
+                    id="footage"
+                    width="800"
+                    height="450"
+                    autoplay
+                    muted
+                    loop
+                ></video>
+            </div>
             <audio autoplay controls>
                 <source src="media/lionking.mp3" type="audio/mpeg" />
             </audio>
-            <div id="pop-up">
-                <p>
-                    Background video credit:
-                    <a
-                        href="https://www.youtube.com/channel/UCIvTu9cuf-NZFzHPJZPH23Q"
-                        target="_blank"
-                        >Willem Verbeeck</a
-                    >
-                </p>
-            </div>
         </div>
     </body>
 </html>

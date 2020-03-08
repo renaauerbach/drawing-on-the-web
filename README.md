@@ -1,4 +1,6 @@
-# Claire Wang
-## Drawing on the Web | Assignment 4
+Collage Remix
+===================================================
+####Drawing on the Web - Assignment 4
 
-[Link to my collage](http://i6.cims.nyu.edu/~cyw336/drawing/homework1/collage.html)
+Check out my [remixed college](https://i6.cims.nyu.edu/~rma453/drawing/assignment4/drawing-on-the-web/collage.html)  
+Forked from Claire Wang's [repository](https://github.com/clawang/drawing-on-the-web)
